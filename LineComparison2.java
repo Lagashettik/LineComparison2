@@ -28,15 +28,17 @@ public class LineComparison2 {
 	String s1= String.valueOf(this.LineCalc());
 	String s2= String.valueOf(Line2.LineCalc());
 
-	boolean var =s1.equals(s2);
+	double var =s1.compareTo(s2);
 
-	if(var == true ){
-		System.out.println("Both Lines lengths are equal");
+	if(var == 0 ){
+		System.out.println("Both Lines Length are equal");
 		}
-	else {
-		System.out.println("Both Lines lengths are not equal");
+	else if(var > 0){
+		System.out.println("Length of Line1 is Greater");
 		}
-
+	else{
+		System.out.println("Length of Line2 is Greater");
+		}
 	}
 
 	public static void main(String args[]){
